@@ -22,6 +22,7 @@ export const Posts = () => {
   useEffect(() => {
     const handleScroll = () => setshowButtonGoToTop(window.scrollY >= 200);
     window.addEventListener('scroll', handleScroll);
+    console.log('Mounted...');
     return () => {
       window.removeEventListener('scroll', handleScroll);
       console.log('Umounted...');

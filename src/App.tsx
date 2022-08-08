@@ -13,28 +13,30 @@ import { Counter } from './components/state/Counter';
 import { Gift } from './components/state/Gift';
 import { ListCheckBox } from './components/state/ListCheckBox';
 import { TodoList } from './components/state/TodoList';
-import { Content } from './components/useEffect/Content';
 import { Toggle } from './components/state/Toggle';
-
-function App() {
-  const personName = {
+import { UseCallback } from './components/useCallback/UseCallback';
+import { UseMemo } from './components/useMemo/UseMemo';
+import { UseReducer } from './components/userReducer/UseReducer';
+import { ToDoList } from './components/userReducer/ToDoList';
+const personName = {
+  firstName: 'Ngo',
+  lastName: 'Canh',
+};
+const personNameList = [
+  {
     firstName: 'Ngo',
     lastName: 'Canh',
-  };
-  const personNameList = [
-    {
-      firstName: 'Ngo',
-      lastName: 'Canh',
-    },
-    {
-      firstName: 'Thao',
-      lastName: 'Huyen',
-    },
-    {
-      firstName: 'Tran',
-      lastName: 'Vo',
-    },
-  ];
+  },
+  {
+    firstName: 'Thao',
+    lastName: 'Huyen',
+  },
+  {
+    firstName: 'Tran',
+    lastName: 'Vo',
+  },
+];
+function App() {
   return (
     <div>
       <Navbar></Navbar>
@@ -53,8 +55,11 @@ function App() {
         <Gift />
         <ListCheckBox />
         <TodoList />
-        <Content />
         <Toggle />
+        <UseCallback />
+        <UseMemo />
+        <UseReducer />
+        <ToDoList />
       </div>
     </div>
   );
